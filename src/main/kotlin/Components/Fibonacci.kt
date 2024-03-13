@@ -1,3 +1,5 @@
+package Components
+
 class Fibonacci {
     fun IsInFibonacci(number: Int): Boolean {
 

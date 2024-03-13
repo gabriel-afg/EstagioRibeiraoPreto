@@ -1,7 +1,33 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import Components.Fibonacci
+import Components.StringInverter
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() {
+
+    val fibonacci = Fibonacci()
+    val stringInverter = StringInverter()
+
+    // Fibonacci
+    val numbers = arrayOf(1, 5, 9, 13, 25, 34) // Numeros de testes
+
+    for (number in numbers) {
+        if(fibonacci.IsInFibonacci(number)){
+            println("O número $number pertence a sequência de Components.Fibonacci")
+        }
+        else {
+            println("O número $number não pertence a sequência de Components.Fibonacci")
+        }
+    }
+
+    //
+
+    println("---------------")
+
+    // Inverter caracteres String
+
+    val original = "Hello world"
+    println("String original: $original")
+    println("String invertida: ${stringInverter.invertString(original)}")
+
+    //
+
 }
